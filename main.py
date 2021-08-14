@@ -1,18 +1,18 @@
 import artwork
 import random
 
-streak = 0
+
 print(artwork.title)
-print("Welcome to High or Low!\nDo you think the next number will be higher or lower?")
-print("\nThe game always starts with the number 11, get a streak of 5 to win!")
+
+streak = 0
 end_of_game = False
+first_number = random.randint(1, 21)
 
-first_number = 11
+print("Welcome to High or Low!\nDo you think the next number will be higher or lower?")
+print(f"\nThe game always starts with the number {first_number}, get a streak of 5 to win!")
+
 while not end_of_game:
-
-
     second_number = random.randint(1, 21)
-
     player_input = input("\nHigher or Lower? Type H or L\n").lower()
 
     if player_input == "h" and second_number > first_number:
